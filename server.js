@@ -14,7 +14,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/article-one',function(re, res) {
-    res.send('Article One requested');
+    res.send('<html> <H>Article One requested </H></html>');
 });
 
 app.get('/article-two',function(re, res) {
