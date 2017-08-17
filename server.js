@@ -14,7 +14,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/article-one',function(re, res) {
-    res.send('<html> <H1><B>Article <a href="http://www.google.com">One</a> requested </B> </H1></html>');
+    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));;
 });
 
 app.get('/article-two',function(re, res) {
