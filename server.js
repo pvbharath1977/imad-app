@@ -23,7 +23,7 @@ var Articles = {
                     </p>`
     },
     'article-two': {
-         Title: "Article Two",
+        Title: "Article Two",
         Heading: 'This is the revised Article Two from template',
         Content : `<p>
                         This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
@@ -39,7 +39,7 @@ var Articles = {
                     </p>`
     },
     'article-three': {
-         Title: "Article Three",
+        Title: "Article Three",
         Heading: 'This is the revised Article Three from template',
         Content : `<p>
                         This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
