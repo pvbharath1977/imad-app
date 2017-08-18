@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var Articles = {
-        ArticleOne: {
+    ArticleOne: {
         Title: "Article One",
         Heading: 'This is the revised Article One from template',
         Content : `<p>
