@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var ArticleOne = {
     Title: "Article One",
-    Heading: 'This is the revised Article One',
+    Heading: 'This is the revised Article One from template',
     Content : `<p>
                     This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
                 </p>
