@@ -57,14 +57,14 @@ var Articles = {
 };
 
 function createTemplate (DataObject){
-    var Title = DataObject.Title;
+    var Titl = DataObject.Title;
     var Heading = DataObject.Heading;
     var Content = DataObject.Content;
     var htmlTemplate = `
     <html>
         <head>
             <title>
-                ${Title}
+                ${Titl}
             </title>
             <link href="/ui/style.css" rel="stylesheet" />
         </head>
