@@ -22,6 +22,23 @@ var ArticleOne = {
                 </p>`
 }
 
+var ArticleTwo = {
+     Title: "Article Two",
+    Heading: 'This is the revised Article Two from template',
+    Content : `<p>
+                    This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
+                </p>
+                <p>
+                    This is the content area
+                </p>
+                <p>
+                    This is the content area
+                </p>
+                <p>
+                    This is the content area
+                </p>`
+}
+
 function createTemplate (DataObject){
     var Title = DataObject.Title;
     var Heading = DataObject.Heading;
@@ -64,7 +81,7 @@ app.get('/article-one',function(re, res) {
 });
 
 app.get('/article-two',function(re, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+    res.send(createTemplate(ArticleTwo));
 });
 
 app.get('/article-Three',function(re, res) {
