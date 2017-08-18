@@ -23,7 +23,7 @@ var ArticleOne = {
 }
 
 function createTemplate (DataObject){
-    var Title = DataObjct.Title;
+    var Title = DataObject.Title;
     var Heading = DataObject.Heading;
     var Content = DataObject.Content;
     var htmlTemplate = `
