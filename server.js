@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var Articles = {
-        ArticleOne = {
+        ArticleOne: {
         Title: "Article One",
         Heading: 'This is the revised Article One from template',
         Content : `<p>
@@ -22,7 +22,7 @@ var Articles = {
                         This is the content area
                     </p>`
     },
-    ArticleTwo = {
+    ArticleTwo: {
          Title: "Article Two",
         Heading: 'This is the revised Article Two from template',
         Content : `<p>
@@ -38,7 +38,7 @@ var Articles = {
                         This is the content area
                     </p>`
     },
-    ArticleThree = {
+    ArticleThree: {
          Title: "Article Three",
         Heading: 'This is the revised Article Three from template',
         Content : `<p>
