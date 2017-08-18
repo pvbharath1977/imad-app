@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var Articles = {
     'article-one': {
-        Title: "Article One",
+        Titl: "Article One",
         Heading: 'This is the revised Article One from template',
         Content : `<p>
                         This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
@@ -23,7 +23,7 @@ var Articles = {
                     </p>`
     },
     'article-two': {
-        Title: "Article Two",
+        Titl: "Article Two",
         Heading: 'This is the revised Article Two from template',
         Content : `<p>
                         This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
@@ -39,7 +39,7 @@ var Articles = {
                     </p>`
     },
     'article-three': {
-        Title: "Article Three",
+        Titl: "Article Three",
         Heading: 'This is the revised Article Three from template',
         Content : `<p>
                         This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
@@ -57,7 +57,7 @@ var Articles = {
 };
 
 function createTemplate (DataObject){
-    var Titl = DataObject.Title;
+    var Titl = DataObject.Titl;
     var Heading = DataObject.Heading;
     var Content = DataObject.Content;
     var htmlTemplate = `
