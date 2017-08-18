@@ -5,6 +5,52 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var ArticleOne = {
+    Title: "Article One",
+    Heading: 'This is the revised Article One',
+    Content : `<p>
+                    This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
+                </p>
+                <p>
+                    This is the content area
+                </p>
+                <p>
+                    This is the content area
+                </p>
+                <p>
+                    This is the content area
+                </p>`
+}
+
+function createTemplate (DataObject){
+    var Title = DataObjct.Title;
+    var Heading = DataObject.Heading;
+    var Content = DataObject.Content;
+    var htmlTemplate = `
+    <html>
+        <head>
+            <title>
+                ${Title}
+            </title>
+            <link href="/ui/style.css" rel="stylesheet" />
+        </head>
+        <body>
+            <div class = "Container">
+                <div>
+                    <a href = "/">Home</a>
+                </div>
+                <hr/>
+                ${Heading}
+                <div>
+                    ${Content}
+                </div>
+            </div>
+        </body>
+    </html>
+    
+    `;
+    return htmlTemplate;
+};
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -14,7 +60,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/article-one',function(re, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+    res.send(createTemplate(ArticleOne));
 });
 
 app.get('/article-two',function(re, res) {
