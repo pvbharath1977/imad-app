@@ -54,7 +54,8 @@ var Articles = {
                         This is the content area
                     </p>`
     }
-}
+};
+
 function createTemplate (DataObject){
     var Title = DataObject.Title;
     var Heading = DataObject.Heading;
@@ -93,16 +94,10 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/:articleName',function(re, res) {
+    var articleName = req.params.articleName;
     res.send(createTemplate(Articles[articleName]));
 });
 
-app.get('/article-two',function(re, res) {
-    res.send(createTemplate(Articles.ArticleTwo));
-});
-
-app.get('/article-Three',function(re, res) {
-    res.send(createTemplate(Articles.ArticleThree));
-});
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
