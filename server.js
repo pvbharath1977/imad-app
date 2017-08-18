@@ -5,40 +5,56 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var ArticleOne = {
-    Title: "Article One",
-    Heading: 'This is the revised Article One from template',
-    Content : `<p>
-                    This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
-                </p>
-                <p>
-                    This is the content area
-                </p>
-                <p>
-                    This is the content area
-                </p>
-                <p>
-                    This is the content area
-                </p>`
+var Articles = {
+        ArticleOne = {
+        Title: "Article One",
+        Heading: 'This is the revised Article One from template',
+        Content : `<p>
+                        This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
+                    </p>
+                    <p>
+                        This is the content area
+                    </p>
+                    <p>
+                        This is the content area
+                    </p>
+                    <p>
+                        This is the content area
+                    </p>`
+    },
+    ArticleTwo = {
+         Title: "Article Two",
+        Heading: 'This is the revised Article Two from template',
+        Content : `<p>
+                        This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
+                    </p>
+                    <p>
+                        This is the content area
+                    </p>
+                    <p>
+                        This is the content area
+                    </p>
+                    <p>
+                        This is the content area
+                    </p>`
+    }
+    ArticleThree = {
+         Title: "Article Three",
+        Heading: 'This is the revised Article Three from template',
+        Content : `<p>
+                        This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
+                    </p>
+                    <p>
+                        This is the content area
+                    </p>
+                    <p>
+                        This is the content area
+                    </p>
+                    <p>
+                        This is the content area
+                    </p>`
+    }
 }
-
-var ArticleTwo = {
-     Title: "Article Two",
-    Heading: 'This is the revised Article Two from template',
-    Content : `<p>
-                    This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
-                </p>
-                <p>
-                    This is the content area
-                </p>
-                <p>
-                    This is the content area
-                </p>
-                <p>
-                    This is the content area
-                </p>`
-}
-
 function createTemplate (DataObject){
     var Title = DataObject.Title;
     var Heading = DataObject.Heading;
@@ -77,15 +93,15 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/article-one',function(re, res) {
-    res.send(createTemplate(ArticleOne));
+    res.send(createTemplate(Articles.ArticleOne));
 });
 
 app.get('/article-two',function(re, res) {
-    res.send(createTemplate(ArticleTwo));
+    res.send(createTemplate(Articles.ArticleTwo));
 });
 
 app.get('/article-Three',function(re, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+    res.send(createTemplate(Articles.ArticleThree));
 });
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
