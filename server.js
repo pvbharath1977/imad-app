@@ -37,7 +37,7 @@ var Articles = {
                     <p>
                         This is the content area
                     </p>`
-    }
+    },
     ArticleThree = {
          Title: "Article Three",
         Heading: 'This is the revised Article Three from template',
