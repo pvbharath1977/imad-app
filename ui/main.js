@@ -1,3 +1,3 @@
 console.log('Loaded!');
-var txtElement = document.getElementByID("main_text");
+var txtElement = document.getElementById("main_text");
 txtElement.innerHTML = "This is nice";
