@@ -4,5 +4,5 @@ txtElement.innerHTML = "This is nice";
 
 var imgElement = document.getElementById("madi");
 imgElement.onclick = function () {
-    imgElement.style.marginLeft = "100 px";    
+    imgElement.style.marginleft = "100 px";    
 };
