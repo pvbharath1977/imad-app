@@ -8,7 +8,6 @@ var marginleft = 0;
 function MoveRight() {
   marginleft = marginleft +2;
   imgElement.style.marginLeft = marginleft + "px";
-  imgElement.style.marginLeft = marginleft-1+ "px";
 }
 
 
