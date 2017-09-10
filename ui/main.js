@@ -54,9 +54,10 @@ submitbtn.onclick = function () {
     request.send(null);  
 };
 
-
+/*
 
 imgElement.onclick = function () {
 //    imgElement.style.marginLeft = "200px";    
     var nInterval = setInterval(MoveRight,50);
 };
+*/
