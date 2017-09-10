@@ -33,8 +33,8 @@ button.onclick = function () {
 
 var nameInput = document.getElementById('name');
 var strname = nameInput.value;
-var submit = document.getElementById('submit_btn');
-submit.onclick = function () {
+var submitbtn = document.getElementById('submit_btn');
+submitbtn.onclick = function () {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function() {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -49,7 +49,7 @@ submit.onclick = function () {
             }
         }
     };
-    request.open('GET','http://pvbharath.imad.hasura-app.io/submit-name/?name=' + name,true);
+    request.open('GET','http://pvbharath.imad.hasura-app.io/submit-name/?name=' + strname,true);
     request.send(null);  
 };
 
