@@ -32,7 +32,6 @@ button.onclick = function () {
 };
 
 var nameInput = document.getElementById('name');
-var strname = nameInput.value;
 var submitbtn = document.getElementById('submit_btn');
 submitbtn.onclick = function () {
     var request = new XMLHttpRequest();
@@ -50,6 +49,7 @@ submitbtn.onclick = function () {
             }
         }
     };
+    var strname = nameInput.value;
     request.open('GET','http://pvbharath.imad.hasura-app.io/submit-name/?name=' + strname,true);
     request.send(null);  
 };
