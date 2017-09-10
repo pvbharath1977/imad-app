@@ -103,8 +103,8 @@ app.get('/ui/main.js', function (req, res) {
 });
 
 var nameslist = [];
-app.get('/submit-name/:name', function(req,res) {
-   var nameitem = req.params.name;
+app.get('/submit-name', function(req,res) {
+   var nameitem = req.query.name;
    nameslist.push(nameitem);
    res.send(JSON.stringify(nameslist));
 }); 
