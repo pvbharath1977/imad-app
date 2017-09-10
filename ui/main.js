@@ -31,8 +31,18 @@ button.onclick = function () {
     request.send(null);
 };
 
-
-
+var nameInput = document.getElementById('name');
+var strname = nameInput.value;
+var submit = document.getElementByID('submit_btn');
+submit.onclick = function () {
+    var names = ['name1','name2','name3'];
+    list = '';
+    for (i=0;i<names.length;i++) {
+        list = list + '<li>' + names[i] + '</li>';
+    }
+    var ul = document.getElementById('namelist');
+    ul.innerHTML = list;
+};
 
 
 
