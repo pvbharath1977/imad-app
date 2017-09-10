@@ -33,7 +33,7 @@ button.onclick = function () {
 
 var nameInput = document.getElementById('name');
 var strname = nameInput.value;
-var submit = document.getElementByID('submit_btn');
+var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
     var names = ['name1','name2','name3',strname];
     var list = '';
