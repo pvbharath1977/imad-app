@@ -27,7 +27,8 @@ button.onclick = function () {
         }
     };
 
-    request.open('GET','http://pvbharath.imad')
+    request.open('GET','http://pvbharath.imad.hasura-app.io/',true);
+    request.send(null);
 };
 
 
