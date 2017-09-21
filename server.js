@@ -68,9 +68,9 @@ var Articles = {
 
 
 function createTemplate (DataObject){
-    var Titl = DataObject.Title;
-    var Heading = DataObject.Heading;
-    var Content = DataObject.Content;
+    var Titl = DataObject.title;
+    var Heading = DataObject.heading;
+    var Content = DataObject.content;
     var htmlTemplate = `
     <html>
         <head>
