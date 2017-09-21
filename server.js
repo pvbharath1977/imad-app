@@ -66,6 +66,20 @@ var Articles = {
     }
 };
 
+
+var pool = new Pool(dbconfig);
+
+app.get('test-db', function (req,res){
+    pool.query('select * from dbtest', function(err, result){
+       if (err) {
+           res.status(500).send(err.toString());
+       } else {
+           res.send(JSON.stringify(result));
+       }
+    });
+});
+
+
 function createTemplate (DataObject){
     var Titl = DataObject.Titl;
     var Heading = DataObject.Heading;
@@ -104,17 +118,7 @@ app.get('/counter',  function(req, res){
     res.send(counter.toString());
 });
 
-var pool = new Pool(dbconfig);
 
-app.get('test-db', function (req,res){
-    pool.query('select * from dbtest', function(err, result){
-       if (err) {
-           res.status(500).send(err.toString());
-       } else {
-           res.send(JSON.stringify(result));
-       }
-    });
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
