@@ -70,6 +70,7 @@ var Articles = {
 function createTemplate (DataObject){
     var Titl = DataObject.title;
     var Heading = DataObject.heading;
+    var Date = DataObject.date;
     var Content = DataObject.content;
     var htmlTemplate = `
     <html>
@@ -85,7 +86,8 @@ function createTemplate (DataObject){
                     <a href = "/">Home</a>
                 </div>
                 <hr/>
-                ${Heading}
+                ${Heading} 
+                ${Date}
                 <div>
                     ${Content}
                 </div>
