@@ -4,7 +4,7 @@ var path = require('path');
 
 var Pool = require('pg').Pool;
 
-var config = {
+var dbconfig = {
     user: 'pvbharath',
     database: 'pvbharath',
     host: 'db.imad.hasura-app.io',
@@ -104,7 +104,7 @@ app.get('/counter',  function(req, res){
     res.send(counter.toString());
 });
 
-var pool = new Pool(config);
+var pool = new Pool(dbconfig);
 
 app.get('test-db', function (req,res){
     pool.query('select * from dbtest', function(err, result){
