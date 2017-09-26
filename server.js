@@ -15,56 +15,7 @@ var dbconfig = {
 var app = express();
 app.use(morgan('combined'));
 
-var Articles = {
-    'article-one': {
-        Titl: "Article One",
-        Heading: 'This is the revised Article One from template',
-        Content : `<p>
-                        This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
-                    </p>
-                    <p>
-                        This is the content area
-                    </p>
-                    <p>
-                        This is the content area
-                    </p>
-                    <p>
-                        This is the content area
-                    </p>`
-    },
-    'article-two': {
-        Titl: "Article Two",
-        Heading: 'This is the revised Article Two from template',
-        Content : `<p>
-                        This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
-                    </p>
-                    <p>
-                        This is the content area
-                    </p>
-                    <p>
-                        This is the content area
-                    </p>
-                    <p>
-                        This is the content area
-                    </p>`
-    },
-    'article-three': {
-        Titl: "Article Three",
-        Heading: 'This is the revised Article Three from template',
-        Content : `<p>
-                        This is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content areaThis is the content area
-                    </p>
-                    <p>
-                        This is the content area
-                    </p>
-                    <p>
-                        This is the content area
-                    </p>
-                    <p>
-                        This is the content area
-                    </p>`
-    }
-};
+
 
 
 function createTemplate (DataObject){
