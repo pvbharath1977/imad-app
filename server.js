@@ -87,7 +87,7 @@ function createTemplate (DataObject){
                 </div>
                 <hr/>
                 ${Heading} 
-                ${Date}
+                ${Date.toDateString()}
                 <div>
                     ${Content}
                 </div>
